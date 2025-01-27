@@ -1,0 +1,145 @@
+h1 {
+    text-transform: uppercase;
+    color: darkblue;
+}
+
+#p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+header nav ul{
+    list-style-type: lower-roman;
+    margin: 0px;
+    
+}
+
+header ul {
+   margin: 0px;
+}
+
+footer ul {
+    margin: 0px;
+}
+
+article section h2{
+    border-bottom: ;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+header {
+    padding-bottom: 7px;
+    background-color: blanchedalmond;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+}
+
+section {
+   width: 300px;
+   height: 300px;
+   border: 2px solid black; 
+   background-image: url(./IMG_4050.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+}
+
+ section {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: darkcyan;
+    border: 1px solid;
+    padding-bottom: 2px;
+}
+
+p1 {
+    width: 300px;
+    height:300px;
+    border:2px, solid black;
+    background-image: url(./IMG_4050.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+.p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+form label {
+    font-size: 20px;
+    color: greenyellow;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form input::placeholder {
+    color:green;
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+
+form input[ type='submit'] {
+    background-color: green;
+    color: white;
+    border: 1px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding:10px;
+    margin-bottom: 7px;
+}
+
+form input[ type='submit']:hover {
+    background-color: white;
+    color: green;
+}
+
+section table{
+    text-align: center;
+    border-collapse: collapse;
+}
+
+
+#firstchild {
+    background-color: darkgray;
+    color:rgb(63, 17, 17);
+    border: 1px; solid;
+    padding:5px; 
+}
+
+footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: rgb(180, 164, 196);
+}
+
+footer ul a{
+    color: rgb(56, 10, 19);
+    text-decoration: none;
+}
+
+footer ul a:hover{
+    background-color: bisque;
+    color:darkgreen;
+}
+
