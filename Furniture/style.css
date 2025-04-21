@@ -1,0 +1,788 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: Poppins, sans-serif;
+    padding: 0 10vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5d50;
+    padding: 30px 10vw;
+    color: #fff;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+    border-bottom: 5px solid #3b5d50;
+    padding-bottom: 7px;
+    transition: 0.3s ease;
+}
+
+header nav ul li:hover {
+    border-bottom: 5px solid orange;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li i {
+    font-size: 28px;
+}
+
+.carousel {
+    width: 100vw;
+    margin-top: 0;
+    background-color: #3b5d50;
+    /* display: grid; */
+    padding: 10px 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "heading images"
+        "contentss images"
+        "buttons images";
+}
+
+.carousel h1 {
+    grid-area: heading;
+    align-self: center;
+    color: #fff;
+    font-size: 58px;
+}
+
+.carousel p {
+    grid-area: contentss;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.carousel .btns {
+    grid-area: buttons;
+}
+
+.carousel .btns button {
+    padding: 15px 20px;
+    background: transparent;
+    margin: 0 10px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.carousel .btns button:nth-child(1) {
+    background-color: orange;
+    color: #111;
+    border: 1px solid #111;
+}
+
+.carousel .images {
+    grid-area: images;
+    position: relative;
+}
+
+.carousel .images img:nth-child(1) {
+    width: 100%;
+    z-index: 100;
+    display: inline-block;
+}
+
+.carousel .images img:nth-child(2) {
+    position: absolute;
+    right: 10px;
+    top: -15px;
+    z-index: 0;
+}
+
+.first {
+    padding-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.first .content1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+}
+
+.first .images1 img,
+.first .images2 img,
+.first .images3 img {
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.first .images1,
+.first .images2,
+.first .images3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.first .images1:hover,
+.first .images2:hover,
+.first .images3:hover {
+    background-color: #999;
+}
+
+.first .images1:hover img,
+.first .images2:hover img,
+.first .images3:hover img {
+    transform: translateY(-50px);
+}
+
+.first button {
+    grid-area: button1;
+    padding: 15px 20px;
+    background: #111;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    width: 140px;
+    height: 50px;
+}
+
+.first h1 {
+    font-size: 38px;
+}
+
+.first h2 {
+    font-size: 20px;
+}
+
+.second {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "heading2 heading2 seventh"
+        "third forth seventh"
+        "fifth sixth seventh";
+    gap: 20px;
+    padding: 200px 0;
+}
+
+.second div:nth-child(1) {
+    grid-area: heading2;
+}
+
+.second div:nth-child(2) {
+    grid-area: third;
+}
+
+.second div:nth-child(3) {
+    grid-area: forth;
+}
+
+.second div:nth-child(4) {
+    grid-area: fifth;
+}
+
+.second div:nth-child(5) {
+    grid-area: sixth;
+}
+
+.second div:nth-child(6) {
+    grid-area: seventh;
+    position: relative;
+}
+
+.second div:nth-child(6) img {
+    width: 100%;
+}
+
+.second div:nth-child(6) img:nth-child(1) {
+    position: absolute;
+    left: -60px;
+    top: -45px;
+    width: 50%;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 6 / 3;
+    position: relative;
+    right: 70px;
+}
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 5;
+    text-transform: capitalize;
+    position: relative;
+    left: 150px;
+}
+
+.div3 {
+    grid-area: 2 / 3 / 3 / 5;
+    position: relative;
+    left: 150px;
+    line-height: 30px;
+    position: relative;
+    top: -100px;
+}
+
+.div4 {
+    grid-area: 3 / 3 / 6 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "p1 p2"
+        "p3 p4"
+        "px ";
+    position: relative;
+    left: 150px;
+    line-height: 30px;
+    position: relative;
+    top: -100px;
+}
+
+.cloth {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 40px;
+    border: 1px solid #111;
+}
+
+.third {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "taste h1"
+        "taste p"
+        "taste h6";
+}
+
+.image1 {
+    grid-area: taste;
+}
+
+#v,
+#iv,
+#iiv {
+    position: relative;
+    left: -80px;
+}
+
+#ray {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "taste h1"
+        "taste p"
+        "taste h6";
+}
+
+#light {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "taste h1"
+        "taste p"
+        "taste h6";
+}
+
+.fourth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 100px;
+}
+
+.fourth h1 {
+    font-size: 36px;
+}
+
+.fourth p {
+    line-height: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fifth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.fifth #persona {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.fifth i {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #aaa;
+}
+
+.fifth i:hover {
+    background-color: darkslategray;
+}
+
+#charm {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+#chef {
+    color: #999;
+}
+
+.sixth #space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+    padding-bottom: 70px;
+}
+
+.sixth #space h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sixth #space a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.seventh {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 150px;
+}
+
+
+
+.un {
+    width: 300px;
+    text-align: left;
+}
+
+
+.un h1 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.un p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.un img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: transform 0.3 ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.eighth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    
+}
+
+.eighth .Nova img, h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    color:#3b5d50;
+}
+
+
+.eighth .Nova form input [type='text'] {
+    border: 7px solid #ccc;
+    width: 150px;
+    padding: 15px;
+
+}
+
+form input [ type='email'] {
+    border:10px solid #111;
+
+}
+
+form input[ type='submit'] {
+   background-color: #3b5d50;
+   cursor: pointer;
+   border: 20px;
+   border-radius: 7px;
+   color: #fff;
+   padding: 15px;
+}
+
+/* .ninth {
+    display: grid;
+    padding: 30px;
+}
+
+.ninth .left  {
+    width: 30%;
+} */
+
+
+.ninth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.ninth h1 {
+    font-size: 30px;
+    color: #3b5d50;
+
+}
+
+.ninth p {
+    line-height: 60px;
+    max-width: 650px;
+    text-align: left;
+}
+
+
+.ninth  ul  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 7px;
+    width: 10px;
+}
+
+
+
+.ninth ul li i {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color:lightblue;
+}
+
+.tenth {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "link ocean thug oklahama";
+}
+
+#erste {
+    grid-area: link;
+}
+
+#zweite {
+    grid-area: ocean;
+}
+
+#dritte {
+    grid-area: thug;
+}
+
+#vierte {
+    grid-area: Oklahama;
+}
+
+.blast {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: start;   
+    font-family: sans-serif;
+    margin: 0 10%;
+    width: 100%;
+    gap: 15px;
+    padding-top: 30px;
+    border-top: 1px solid #999;
+    margin-top: 100px;
+    
+}
+
+#spa, #msj {
+    position: relative;
+    right: 300px;
+}
+
+#hot, #lean {
+    position: relative;
+    left: 150px;
+}
+
+
+
+
+/* .seventh:hover img {
+   filter: brightness(1.1);
+    
+} */
+
+/* "clip clip clip"
+    "clip clip clip"
+    "trap trap trap"
+    "flip flip flip"; */
+
+/* #un {
+    grid-area: frank;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 5px;
+} */
+
+/* .seventh #un {
+    grid-area: blvrd;
+}
+
+.seventh #deux {
+    grid-area: Strasse;
+}
+
+.seventh #trois {
+    grid-area: cross;
+} */
+
+/* #flame {
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "taste h1"
+        "taste p"
+        "taste h6";
+}
+
+.image1 {
+    grid-area: taste;
+}  */
+
+/* }
+
+.parent .div4 .double i {
+    grid-area: p1;
+}
+
+.parent .div4 .triple i  {
+    grid-area: p2;
+}
+
+.parent .div4 .quadruple i {
+    grid-area: p3;
+}
+
+.parent .div4 .quintuple i {
+    grid-area: p4;
+}
+
+.parent .cloth {
+    grid-area: px;
+} */
+
+/* .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 5; 
+    
+}
+
+.div3 { 
+    grid-area: 2 / 3 / 3 / 5;
+    
+}
+
+.div4 {
+    grid-area: 3 / 3 / 5 / 5; 
+    
+}
+
+
+
+} */
+
+/* .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 20px;
+}
+    
+.div1 {
+    grid-area: 1 / 1 / 6 / 3;
+  
+}
+
+.div2 {
+    grid-area: 1 / 3 / 2 / 5;
+    
+   
+}
+
+.div3 {
+    grid-area: 2 / 3 / 3 / 5;
+    
+}
+
+
+.div4 {
+    grid-area: 3 / 3 / 4 / 4;
+    
+}
+
+
+.div5 { grid-area: 3 / 4 / 4 / 5; } */
+
+/* .third {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+       "base base floor floor "
+       "base base top top"
+       "base base low high"
+       "base base back on"
+       "base base off    ";
+    padding: 50px 0;
+}
+
+.third div:nth-child(1) {
+    grid-area: base;
+    width:100%;
+    position:relative;
+    right:40px;
+}
+
+.third div:nth-child(2) {
+    grid-area: floor;
+    text-transform: capitalize;
+    /* font-weight: bold; */
+
+/* }
+
+.third div:nth-child(3) {
+    grid-area: top;
+}
+
+.third div:nth-child(4) {
+    grid-area: low;
+}
+
+.third div:nth-child(5) {
+    grid-area: high;
+}
+
+.third div:nth-child(6) {
+    grid-area: back;
+}
+
+.third div:nth-child(7) {
+    grid-area: on;
+}
+
+.third div:nth-child(7) {
+    grid-area: off;
+} */
