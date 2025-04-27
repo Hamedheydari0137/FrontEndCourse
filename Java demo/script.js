@@ -23,4 +23,19 @@ var midterm=18.25;
 var final=16;
 var average= (midterm+final) /2;
 
-console.log (average);
+
+
+var average=17.25;
+
+if (average>= 10) {
+    console.log ('pass');
+
+}else {
+    console.log ('fail');
+}
+console.log ('end of the script');
+
+
+
+
+
