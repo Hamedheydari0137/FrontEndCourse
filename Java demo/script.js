@@ -128,3 +128,114 @@ if (username ===correctUsername && password === correctPassword) {
 console.log ("end of the script");
 
 
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+// Exercise 1
+
+for (var i=2; i<20; i += 2) {
+    console.log (i);
+}
+
+for (var i=1; i<=20; i++){
+    if (i % 2===0) {
+        console.log(i);
+    }
+}
+
+// Exercise 2
+
+
+var sum=0;
+
+for (var i=1; i<100; i++) {
+    if (i%3===0 || i%5===0){
+        sum=sum+i;
+    }
+}
+
+console.log("sum:", sum);
+
+var sum=0;
+
+for (var i=1; i<100; i++) {
+    if (i%3===0 || i%5===0){
+        sum += i;
+    }
+}
+
+console.log("Sum:", sum);
+
+// Exercise 3
+
+for (var i=1; i<50; i++) {
+    if (i%4 !== 0 && i%6 !==0){
+        console.log (i);
+    }
+}
+
+// Exercise 4
+
+
+for (var i=1; i<100; i++) {
+    if (i%7 ==0 && i%9 ==0){
+        console.log (i);
+    }
+}
+
+var first=0;
+
+for ( var i=1; i<=100; i++){
+    if (i%7===0 && i% 9===0 && first===0 ){
+        first=i;
+    }
+}
+
+console.log ("first number divisible by both 7 and 9", first);
+
+// Exercise 5
+
+for (var i=1; i<100; i++){
+    if (i% 2===0 && i%3 !==0){
+        console.log (i);
+    }
+}
+
+var count=0;
+
+for (var i=1; i<=100; i++) {
+    if (i% 2===0 && i% 3!==0) {
+        count++;
+    }
+}
+
+console.log ("Count", count);
+
+// Exercise 6
+
+
+// for (var i=2; i<=50; i++) {
+//     var count=0;
+//     for (var i2=1; i2 <= i; i2++){
+//         if (i % 12===0){
+//             count++;
+//         }
+//     }
+//     if (count===2){
+//         console.log (i);
+//     }
+// }
+
+// Exercise 7
+
+var a=0;
+var b=1;
+
+for (var i=0; i<10; i++) {
+    console.log(a);
+    var next=a+b;
+    a=b;
+    b=next;
+}
