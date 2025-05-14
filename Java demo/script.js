@@ -145,6 +145,14 @@ for (var i=1; i<=20; i++){
     }
 }
 
+var i=2;
+
+while (i<=20) {
+    console.log (i);
+    i+=2;
+}
+
+
 // Exercise 2
 
 
@@ -168,12 +176,39 @@ for (var i=1; i<100; i++) {
 
 console.log("Sum:", sum);
 
+
+var sum=0;
+var i=1;
+
+while (i<100) {
+    if (i%3===0 || i%5===0){
+        sum=sum+i;
+    }
+    i++;
+}
+
+console.log("Sum:", sum);
+
+
+
+
+
+
 // Exercise 3
 
 for (var i=1; i<50; i++) {
     if (i%4 !== 0 && i%6 !==0){
         console.log (i);
     }
+}
+
+var i=1;
+
+while (i<=50) {
+    if (i%4 !==0 && i% 6 !==0) {
+        console.log (i);
+    }
+    i++;
 }
 
 // Exercise 4
@@ -195,6 +230,21 @@ for ( var i=1; i<=100; i++){
 
 console.log ("first number divisible by both 7 and 9", first);
 
+
+var i=1;
+var first=0;
+
+while (i<=100 && first===0) {
+    if (i%7===0 && i%9===0) {
+        first=i;
+    }
+    i++;
+}
+
+console.log ("first number divisible by both 7 and 9", first);
+
+
+
 // Exercise 5
 
 for (var i=1; i<100; i++){
@@ -212,6 +262,19 @@ for (var i=1; i<=100; i++) {
 }
 
 console.log ("Count", count);
+
+
+var i=1;
+var count=0;
+
+while (i<=100) {
+    if (i%2===0 && i % 3 !==0) {
+        count++;
+    }
+    i++;
+}
+
+console.log ("count", count);
 
 // Exercise 6
 
@@ -238,4 +301,16 @@ for (var i=0; i<10; i++) {
     var next=a+b;
     a=b;
     b=next;
+}
+
+var a=0;
+var b=1;
+var i=0;
+
+while (i<10) {
+    console.log(a);
+    var next=a+b;
+    a=b;
+    b=next;
+    i++;
 }
